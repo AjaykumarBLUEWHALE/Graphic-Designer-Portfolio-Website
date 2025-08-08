@@ -2,7 +2,7 @@
 
 ## 🚀 Overview
 <a href="https://ajaykumarbluewhale.github.io/My_portfolio/" target="_blank">
-  <img src="./Img/thumbnail.png.jpeg" alt="Portfolio Thumbnail"/>
+  <img src="img/Website.png" alt="Portfolio Thumbnail"/>
 </a>
 
 Showcase your creativity and professional design work with this **modern, responsive portfolio website** built using **HTML**, **CSS**, and **JavaScript**.  
