@@ -53,9 +53,9 @@ This project is designed to present your skills and personality in a clean, enga
 ## 📁 Project Structure
 /img/                  # Folder containing images used across the site
 
-/video/                # Folder containing video files (portfolio work)
+/video/                # Folder containing video files 
 
-/alex.css              # Additional CSS styling (possibly theme-specific)
+/alex.css              # Additional CSS styling 
 
 app.js                 # Main JavaScript functionality
 
@@ -68,5 +68,5 @@ pricing.html           # Pricing details for services
 products.html          # Showcase of products or portfolio items
 
 
-README.md              # Project documentation (this file)
+README.md              # Project documentation 
 
