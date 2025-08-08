@@ -1,7 +1,7 @@
 # 🎨 Graphic Designer Portfolio – HTML, CSS & JavaScript
 
 ## 🚀 Overview
-<a href="https://ajaykumarbluewhale.github.io/My_portfolio/" target="_blank">
+<a href="https://ajaykumarbluewhale.github.io/Graphic-Designer-Portfolio-Website/" target="_blank">
   <img src="img/Website.png" alt="Portfolio Thumbnail"/>
 </a>
 
