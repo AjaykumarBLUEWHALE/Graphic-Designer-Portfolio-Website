@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+         <script src="https://cdn.tailwindcss.com"></script>
+         <link rel="stylesheet" href="alex.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+nav{
+  cursor: pointer;
+}
+.mob{
+    display: none;
+ 
+}
+.mob_menu{
+ display: none;
+}
+
+/* iPad Mini Portrait */
+/* iPad Mini Portrait */
+@media only screen and (min-device-width: 748px) and (max-device-width: 834px) and (orientation: portrait) {
+  .disapper {
+    display: none;
+  }
+  .mob {
+    display: block;
+  }
+ nav{
+  margin-left: 100px !important;
+ }
+
+#theLab {
+
+  margin-left: 140px !important;
+}
+
+}
+
+/* iPad Mini Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 834px) and (orientation: landscape) {
+  .disapper {
+    display: block;
+  }
+  .mob {
+    display: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+        .grid-container {
+        flex-direction: column !important;
+      }
+    .box {
+ border: red solid 2px;
+width: 100% !important;
+      }
+    .angle{
+        font-size: 1rem !important;
+    }
+    .disapper{
+        display: none;
+    }
+    .mob{
+    display: block;
+}
+.mob_menu{
+
+ background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+margin-top: -30px !important;
+font-size: 30px;
+}
+.work{
+  border: none !important;
+}
+.mob_menu div{
+border-top: 2px white solid;
+margin-left: 10px;
+margin-right: 10px;
+
+}
+.containers{
+     padding: 2px;
+     
+}
+.containers > div {
+   box-shadow: 5px 5px black;
+  font-size: 20px;
+}
+.banner{
+    margin-top: 200px !important;
+}
+  .banner .first-ad {
+      font-size: 3em !important; /* or any smaller size you prefer */
+    }
+   .banner   .first-btn{
+       margin-left: 70px;
+          padding: 12px 0 12px 0;
+    }
+    nav{
+        margin-top: -20px;
+         margin-left: 0px;
+    }
+    
+    .containers > div {
+
+  border: none;}
+    .ILLUSTRAIOR{
+    display: flex;
+    align-items: center;
+    }
+    .design_info{
+margin-left: 5px !important;
+      h1{
+        font-size: 2em;
+      }
+      p{
+        margin-left: 5px !important;
+        font-size: 10px;
+      }
+    }
+    .img_div{
+      top: -59% !important;
+    }
+    .design1,.design2,.design3{
+    width: 35vw !important;
+    height: 30vh !important;
+    }
+    .poster1{
+      left: 40px;
+      top: -20px;
+ height: 35vh;
+ width: 70vw;
+    }
+    .book-shelf{
+  transform: scale(0.7);
+
+}
+
+.book {
+
+top: 10px;
+left: 20px;
+
+}
+}
+</style>
+</head>
+<body class="m-0 p-0">
+
+  <!-- Fullscreen Container -->
+  <div class="relative w-full h-screen overflow-hidden" id="about">
+
+    <!-- Background Image -->
+   <video
+    autoplay
+    muted
+    loop
+    class="absolute top-0  left-0 w-full h-full object-cover z-0 "
+    id="myVideo"
+  >
+    <source src="video/hello.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+    <!-- Content Layer -->
+    <div class="relative z-[9999] text-white p-10">
+      <nav class="fixed  left-0 w-full z-50 bg-transparent  text-2xl font-bold px-4 py-4 ">
+        <div class="containers">
+  <div class="tal" style="background-color: black; color: white;">MAN</div>
+  <div class="ILLUSTRAIOR" style="font-size: 19px;" id="ill" > <!-- From Uiverse.io by Voxybuns --> 
+<label class="switch"  >
+  <input type="checkbox"  id="btn-ill">
+  <span class="slider sm:mt-2 mt-0 sm:mb-[-8px] mb-[-0px]" ></span>
+</label><span id="ill-text">ILLUSTRATOR</span></div>
+  <div class="disapper"><a href="#main-content">WORK</a></div>  
+  <div class="disapper"><a href="#theLab">THE Lab</a></div>
+  <div class="disapper" > <a href="#about">ABOUT</a></div>
+  <div class="disapper"> <a href="contact.html">CONTACT</a></div>  
+  <div class="disapper" onclick="window.open('pricing.html', '_blank')"> PRICING</div>
+  <div class="disapper" id="arrow"><a href="#"><img id="arrow-img" src="img/Arrow-removebg-preview.png" alt="arrow" style="height: 50px; width: 40px;padding: 5px; margin-left: 15px;"></a></div>
+
+    <div class="mob" id="hamb-btn" onclick="myFunction()" > 
+   <i class="fa fa-bars fa-2x"></i></div>
+
+</div>
+
+      </nav>
+        <div data-aos="fade-down" class="mob_menu fixed top-[19%] left-[22px] h-[300px] w-[88vw] z-[9999]  bg-opacity-80 text-white hidden" id="hamb-menu"  >
+<div class="work"    onclick="myFunction()" ><a href="#main-content">WORK</a></div>
+<div    onclick="myFunction()"><a href="#theLab">THE Lab</a></div>
+<div    onclick="myFunction()"> <a href="#about">ABOUT</a></div>
+<div    onclick="myFunction()"><a href="contact.html">CONTACT</a></div>
+<div    onclick="myFunction()" > <a href="pricing.html">PRICING</a></div>
+</div>
+    <div class="banner mt-[10%] ">  <div   data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1100"
+    
+  data-aos-offset="100"class=" first-ad  mb-2 text-[6em] font-bold text-black bg-white text-center border border-black" >Creative Designer</div>
+      <div id="second-ad" data-aos="fade-down"
+     data-aos-easing="linear"
+       data-aos-delay="400"
+     data-aos-duration="500"   class="mb-2 md:text-[3em]  text-[1.5em] p-1 mt-[-10px] ml-[20%] font-bold text-black bg-white text-center border border-black ">From Delhi, IN.</div>
+        <!-- for email -->
+      <div data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="600"
+       data-aos-duration="500"
+     data-aos-offset="0" class="first-btn w-[150px] text-center  ml-[45%] mt-[50px]" id="background">I have a brief!</div></div>
+    </div>
+
+  </div>
+
+<div class="p-0 cursor-pointer" id="main-content">
+   <div class="p-0  dark:border-gray-700">
+    
+      <div class="grid grid-cols-1 sm:grid-cols-2 border border-black gap-0  mb-0">
+    <div  style="background-color: rgb(171, 95, 247);" class="relative filter grayscale hover:grayscale-0 transition duration-300 border-b border-r border-black bg-gray-50 h-78 dark:bg-gray-800 group overflow-hidden">
+  <!-- Image -->
+  <img src="img/cards.jpg"
+       class="poster1 object-cover  transition duration-300 "
+       alt="category" />
+
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white sm:w-[100px]  w-[50px]sm:text-4xl text-1xl text-black px-4 py-2  shadow sec-btn" > Cards</span>
+  </button>
+</div>
+
+
+    <div class="relative border-b border-r border-black bg-gray-50 h-78 dark:bg-gray-800 group overflow-hidden">
+  <!-- Image 
+  <img src="img/qingyu-r1fNqfIP8ZM-unsplash.jpg"
+       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-300"
+       alt="category" />-->
+<video   autoplay
+    muted
+    loop src="video/original-e315d0f9c9afd6f4122be00dd64755eb.mp4"
+ class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-300"
+       alt="category" 
+
+></video>
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white sm:w-[200px]  w-[100px] sm:text-4xl text-1xl text-black px-4 py-2  shadow sec-btn" >Website</span>
+  </button>
+</div>
+
+ <div class="filter grayscale hover:grayscale-0 transition duration-300 relative  border-b border-r border-black bg-red-500 h-78  group overflow-hidden">
+  <!-- Image -->
+<div class="book-shelf"><div class="book-container">
+  <div class="book">
+      <div class="face side"></div>
+    <div class="face front w-full h-full object-cover ">
+      <img src="img/cover1.jpg" alt="Front Cover">
+    </div>
+    <div class="face side "></div>
+    <div class="face back w-full h-full object-cover ">
+      <img src="img/cover2.png" alt="Back Cover">
+    </div>
+        <div class="face side2"></div>
+  </div>
+</div></div>
+
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white sm:w-[250px]  w-[150px] sm:text-4xl text-1xl text-black px-4 py-2  shadow sec-btn" > Magazine</span>
+  </button>
+</div>
+       <div class="relative border-b border-r border-black bg-gray-50 h-78 dark:bg-gray-800 group overflow-hidden">
+  <!-- Image -->
+  <img  src="https://framerusercontent.com/images/0JkrqRtVYr1wmK9vSk9alKT5nI.jpeg"
+       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-300"
+       alt="category"/>
+
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white sm:w-[200px]  w-[100px] sm:text-4xl text-1xl text-black px-4 py-2  shadow sec-btn" >LOGO</span>
+  </button>
+</div>
+  
+      </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 border border-black border-t-0 mb-0">
+         <div class="relative border-b border-r border-black bg-gray-50 h-78 dark:bg-gray-800 group overflow-hidden">
+  <!-- Image -->
+  <img src="img/shirt.webp"
+       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-300"
+       alt="category" />
+
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white sm:w-[200px]  w-[100px] sm:text-4xl text-1xl text-black px-4 py-2  shadow sec-btn" >T-Shirts</span>
+  </button>
+</div>
+   <div class="relative border-b border-r border-black bg-gray-50 h-78 dark:bg-gray-800 group overflow-hidden">
+  <!-- Image -->
+  <img src="img/attachment_102672349.jpg"
+       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-300"
+       alt="category" />
+
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white sm:w-[200px]  w-[100px] sm:text-4xl text-1xl text-black px-4 py-2  shadow sec-btn" > Magazine</span>
+  </button>
+</div>
+    <div class="relative border-b border-r border-black bg-gray-50 h-78 dark:bg-gray-800 group overflow-hidden">
+  <!-- Image -->
+  <img src="img/Animated-Shopping-Banners-by-Design-Studio.gif"
+       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-300"
+       alt="category" />
+
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white sm:w-[200px]  w-[100px] sm:text-4xl text-1xl text-black px-4 py-2  shadow sec-btn" >banner</span>
+  </button>
+</div>
+  <div class="relative border-b border-r border-black bg-gray-50 h-78 dark:bg-gray-800 group overflow-hidden">
+  <!-- Image -->
+  <img src="img/guide2.jpg"
+       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-300"
+       alt="category" />
+
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white sm:w-[300px]  sm:w-[400px]  w-[200px] sm:text-4xl text-1xl text-black px-4 py-2  shadow sec-btn" >Brand Style Guide</span>
+  </button>
+</div>
+      </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-0  mb-0">
+        <div class="relative border-b border-r border-black bg-gray-50 h-78 dark:bg-gray-800 group overflow-hidden">
+  <!-- Image -->
+  <img src="img/Sticker.webp"
+       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-300"
+       alt="category" />
+
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white   sm:w-[200px]  w-[100px] sm:text-4xl text-1xl  text-black px-4 py-2  shadow sec-btn" >Stickers</span>
+  </button>
+</div>
+    <div class="relative border-b border-r border-black bg-gray-50 h-78 dark:bg-gray-800 group overflow-hidden">
+  <!-- Image -->
+  <img src="img/d41e2333025831.5809d686c2199.gif"
+       class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-300"
+       alt="category" />
+
+  <!-- Hover Button -->
+  <button class="absolute  inset-0 flex items-center justify-center transition-opacity duration-300 z-10">
+    <span class="bg-white sm:w-[400px]  w-[200px] sm:text-4xl text-1xl  text-black px-4 py-2  shadow sec-btn" >Animated Posters</span>
+  </button>
+</div>
+      
+      </div>
+   </div>
+</div>
+
+
+  <div class="bg-white text-black angle text-center relative z-10" style=" transform: rotate(-1deg); font-size: 2rem; margin-top: -12px;">
+   
+    <div class="text-wrapper">
+  <div class="scrolling-text">""This guy is a real pro! I've never seen anything like it in 25 years of graphic design!" //"</div>
+</div>
+  </div>
+    <div class="bg-black h-[500px] mt-[-15px] relative text-white  overflow-x-hidden overflow-y-hidden" style="background: url(https://media.tenor.com/B3ba_dphVXwAAAAM/static-dark.gif);" >
+   <div class="z-10 mt-[100px] design_info ml-[20%] relative" id="theLab">
+    <h1 class="text-[4em]  " data-aos="fade-up"
+     data-aos-duration="2000">The lab</h1>
+    <p class="text-[1em]" data-aos="fade-up"
+     data-aos-duration="3000">Space for graphic experiments <br>
+through daily drawing work to stimulate <br> creativity through repetition and constraint.</p>
+   </div>
+   <div class="first-btn w-[150px] text-center relative text-white border-white hover:border-white sm:ml-[20%] ml-[3%]  mt-[50px] bg-transparent" data-aos="fade-up"
+     data-aos-duration="3500">Discover</div>
+     <div class="relative w-[35vw] img_div left-[70%]  top-[-80%]">
+<div><img src="https://shorturl.at/yF6dF" class="h-[40vh] w-[20vw]  design1 " alt="design"></div>
+<div> <img src="https://shorturl.at/jFV3U" class="h-[40vh] w-[20vw] design2" alt="design"></div>
+<div> <img src="https://shorturl.at/7DfZD" class="h-[40vh] w-[20vw] design3 " alt="design"></div>
+   </div>
+  </div>
+
+  </div>
+  <footer  style="background-color: white; padding: 20px; text-align: center; font-family: sans-serif; color: black;">
+  <p><strong>Ajay Kumar</strong></p>
+  <p>Delhi</p>
+  <p>110059,INDIA</p>
+  <p>+91 8750212460</p>
+  <p>Imprint</p>
+  <p><a href="mailto:ajaykumar8752124@gmail.com" style="font-weight: bold; text-decoration: none;">ajaykumar8752124@gmail.com</a></p>
+  <!-- From Uiverse.io by ahmed150up2 --> 
+    <div class="card">
+   <a class="social-link1" href="https://wa.me/8750212460">
+  
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+  <path d="M12.04 2.004c-5.504 0-9.96 4.456-9.96 9.96a9.91 9.91 0 001.4 5.062L2 22l5.186-1.48a9.975 9.975 0 004.854 1.236h.001c5.504 0 9.96-4.456 9.96-9.96s-4.456-9.96-9.96-9.96zm0 18.176a8.184 8.184 0 01-4.18-1.147l-.3-.18-3.07.878.866-2.993-.195-.308A8.172 8.172 0 013.872 12c0-4.507 3.66-8.168 8.168-8.168s8.168 3.661 8.168 8.168-3.661 8.168-8.168 8.168zm4.487-6.213c-.246-.123-1.457-.719-1.683-.799-.226-.08-.39-.123-.554.123s-.634.799-.777.964c-.143.164-.285.184-.531.062-.246-.123-1.038-.383-1.976-1.222-.73-.651-1.223-1.453-1.367-1.7-.143-.246-.015-.378.108-.5.111-.111.246-.285.369-.43.123-.143.164-.246.246-.41.082-.164.041-.308-.02-.43-.062-.123-.554-1.337-.758-1.832-.2-.48-.403-.415-.554-.423l-.47-.01c-.164 0-.43.061-.655.308-.226.246-.86.84-.86 2.043s.88 2.373 1.003 2.537c.123.164 1.731 2.645 4.199 3.704.588.254 1.047.406 1.405.519.59.188 1.127.162 1.552.098.474-.07 1.457-.596 1.663-1.172.205-.576.205-1.069.143-1.172-.061-.104-.225-.164-.47-.287z"/>
+</svg>
+  </a>
+
+  <!-- ✅ LinkedIn (unchanged) -->
+  <a class="social-link2" href="https://www.linkedin.com/in/ajay-kumar-901150269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#fff">
+      <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+    </svg>
+  </a>
+
+  <!-- 🔄 Replaced unknown (3rd) icon with Twitter -->
+  <a class="social-link3" href="https://x.com/ZZyrical?t=Cz-IpUi0m4-znGTx8gX3EQ&s=08" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
+      <path d="M459.4 151.7c.3 4.3.3 8.5.3 12.8 0 130.9-99.6 281.7-281.7 281.7-56 0-108.2-16.4-152-44.8 7.9.9 15.4 1.2 23.5 1.2 46.3 0 88.7-15.7 122.5-42-43.4-1-79.8-29.2-92.4-68.1 6.1.9 12.2 1.5 18.6 1.5 9 0 17.9-1.2 26.2-3.4-45.4-9.1-79.6-49.2-79.6-97.4v-1.3c13.2 7.3 28.3 11.7 44.3 12.2-26.4-17.6-43.6-47.4-43.6-81.4 0-18.1 4.9-34.8 13.5-49.3 49 60.3 122.5 100.3 205.4 104.7-1.5-7.3-2.4-14.9-2.4-22.5 0-54.9 44.5-99.4 99.4-99.4 28.6 0 54.4 12 72.5 31.1 22.5-4.3 43.9-12.8 63-24.6-7.3 22.8-22.8 42.1-43.1 54.2 20.1-2.1 39.3-7.7 57.3-15.6-13.8 19.8-31.3 37.3-51.2 51.3z"/>
+    </svg>
+  </a>
+
+  <!-- ✅ Facebook (unchanged) -->
+  <a class="social-link4" href="https://www.facebook.com/profile.php?id=100022631985164" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
+      <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/>
+    </svg>
+  </a>
+</div>           
+</footer>
+
+<script src="app.js">
+
+
+
+</script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
